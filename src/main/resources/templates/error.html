@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>🤠 Oops!</title>
+    <style>
+        body { font-family: monospace; text-align:center; padding:50px; background:#f8f1e4; color:#4b2e2e; }
+        h1 { color:#d2691e; font-size:48px; }
+        p { font-size:20px; }
+        a { color:#4b2e2e; font-weight:bold; text-decoration:none; }
+        .details { font-size:14px; margin-top:20px; color:#8b5e3c; }
+    </style>
+</head>
+<body>
+<h1>🤠 Whoops!</h1>
+<p>Something went wrong. Please try again.</p>
+<p><a th:href="@{/}">Return Home</a></p>
+<div class="details">
+    <p>Status Code: <span th:text="${statusCode}">N/A</span></p>
+    <p>Error: <span th:text="${exceptionMessage}">N/A</span></p>
+    <p>Message: <span th:text="${message}">N/A</span></p>
+</div>
+</body>
+</html>
